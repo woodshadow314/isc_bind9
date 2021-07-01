@@ -1,7 +1,7 @@
 version: '3'
 services:
   bind:
-    build: .
+    build: images/isc-bind-9.16/.
     image: woodshadow314/isc_bind9 
     container_name: dns_11
     ports:
