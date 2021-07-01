@@ -4,7 +4,7 @@ RUN apt-get -y update \
 
 RUN apt-get install -y mc
 RUN rm -rf /var/lib/apt/lists/*
-RUN rm -rf /etc/bind/named.conf.default-zones
+RUN su -c "rm -rf /etc/bind/named.conf.default-zones"
 
 RUN ["mkdir", "-p", "/etc/masters_etc"]
 #RUN ["mkdir", "/etc/bind/slaves"]
