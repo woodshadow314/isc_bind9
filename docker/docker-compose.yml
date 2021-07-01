@@ -2,8 +2,9 @@ version: '3'
 services:
   bind:
     build: .
+    image: woodshadow314/isc_bind9 
     container_name: dns_11
     ports:
       - 53:53/tcp
       - 53:53/udp
-    restart: always
+    #restart: always
