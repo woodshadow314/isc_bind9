@@ -1,6 +1,7 @@
 FROM store/internetsystemsconsortium/bind9:9.16
-RUN apt-get -qqqy update \
-	&& apt-get -qqqy upgrade \
+RUN apt-get -y update \
+	&& apt-get -y upgrade \
+	&& apt-get install mc \
 	&& rm -rf /var/lib/apt/lists/*
 
 #RUN ["mkdir", "-p", "/etc/bind/masters"]
