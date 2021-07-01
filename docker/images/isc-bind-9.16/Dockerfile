@@ -4,15 +4,13 @@ RUN apt-get -y update \
 
 RUN apt-get install -y mc
 RUN rm -rf /var/lib/apt/lists/*
-RUN su -c "rm -rf /etc/bind/named.conf.default-zones"
 
-RUN ["mkdir", "-p", "/etc/masters_etc"]
-#RUN ["mkdir", "/etc/bind/slaves"]
+USER root:bind
+RUN ["mkdir", "/etc/bind/slaves"]
 #RUN echo "ddd" >  /etc/bind/777.txt
 #RUN echo "ddd" >>  /etc/bind/named.conf.local
 #&& chown root:bind /etc/bind/slaves
-
-RUN ["/bin/bash", "-c", "mkdir /etc/bind/slaves"]
+#RUN ["/bin/bash", "-c", "mkdir /etc/bind/slaves"]
 
 EXPOSE 53
 
