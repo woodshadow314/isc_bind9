@@ -12,7 +12,7 @@ RUN rm -rf /etc/bind/named.conf.default-zones
 #RUN echo "ddd" >>  /etc/bind/named.conf.local
 #&& chown root:bind /etc/bind/slaves
 
-SHELL ["/bin/bash", "-c", "mkdir /etc/bind/slaves"]
+RUN ["/bin/bash", "-c", "mkdir /etc/bind/slaves"]
 
 EXPOSE 53
 
