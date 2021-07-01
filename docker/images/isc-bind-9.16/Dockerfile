@@ -3,9 +3,9 @@ RUN apt-get -qqqy update \
 	&& apt-get -qqqy upgrade \
 	&& rm -rf /var/lib/apt/lists/*
 
+RUN mkdir /etc/bind/masters && chown root:bind /etc/bind/masters
+RUN mkdir /etc/bind/slaves && chown root:bind /etc/bind/slaves
+
 EXPOSE 53
 
-#CMD ping 127.0.0.1
-#CMD ["/usr/sbin/named", "-c", "/etc/named.conf", "-g", "-u", "named"]
-
-CMD ["/usr/sbin/named", "-g", "-c", "/etc/bind/named.conf", "-u", "bind"]
+#CMD ["/usr/sbin/named", "-g", "-c", "/etc/bind/named.conf", "-u", "bind"]
