@@ -1,8 +1,9 @@
 FROM store/internetsystemsconsortium/bind9:9.16
 RUN apt-get -y update \
-	&& apt-get -y upgrade \
-	&& apt-get install mc \
-	&& rm -rf /var/lib/apt/lists/*
+	&& apt-get -y upgrade
+
+RUN apt-get install mc
+RUN rm -rf /var/lib/apt/lists/*
 
 #RUN ["mkdir", "-p", "/etc/bind/masters"]
 #RUN ["mkdir", "/etc/bind/slaves"]
