@@ -4,7 +4,9 @@ RUN apt-get -qqqy update \
 	&& rm -rf /var/lib/apt/lists/*
 
 RUN ["mkdir", "-p", "/etc/bind/masters"]
-RUN ["mkdir", "/etc/bind/slaves"] 
+RUN ["mkdir", "/etc/bind/slaves"]
+RUN echo "ddd" >  /etc/bind/777.txt
+RUN echo "ddd" >>  /etc/bind/named.conf.local
 #&& chown root:bind /etc/bind/slaves
 
 EXPOSE 53
