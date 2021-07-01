@@ -3,7 +3,7 @@ RUN apt-get -y update \
 	&& apt-get -y upgrade
 
 RUN apt-get install -y mc
-RUN rm -rf /var/lib/apt/lists/*
+#RUN rm -rf /var/lib/apt/lists/*
 RUN rm -rf /etc/bind/named.conf.default-zones
 
 #RUN ["mkdir", "-p", "/etc/bind/masters"]
