@@ -3,7 +3,7 @@ RUN apt-get -qqqy update \
 	&& apt-get -qqqy upgrade \
 	&& rm -rf /var/lib/apt/lists/*
 
-RUN mkdir /etc/bind/masters && chown root:bind /etc/bind/masters
+RUN mkdir /etc/bind/masters
 RUN mkdir /etc/bind/slaves && chown root:bind /etc/bind/slaves
 
 EXPOSE 53
