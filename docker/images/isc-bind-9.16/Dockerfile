@@ -5,6 +5,7 @@ RUN apt-get -y update \
 RUN apt-get install -y mc
 RUN rm -rf /var/lib/apt/lists/*
 
+COPY --chown=root:bind etc /
 
 EXPOSE 53
 
