@@ -9,7 +9,7 @@ COPY --chown=root:bind etc /etc
 COPY isc-bind.sh /tmp
 
 USER bind
-RUN chmod +x /tmp/isc-bind.sh && /tmp/isc-bind.sh
+RUN chmod 777 /tmp/isc-bind.sh && /tmp/isc-bind.sh
 
 EXPOSE 53
 
