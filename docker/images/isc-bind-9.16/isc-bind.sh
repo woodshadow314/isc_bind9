@@ -1,6 +1,6 @@
 #!/bin/bash
 
-exec &>>/tmp/isc-bind.log
+exec &>/tmp/isc-bind.log
  
 echo "Start of configuration" >> /tmp/isc-bind.log
 
