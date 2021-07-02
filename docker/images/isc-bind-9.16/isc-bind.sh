@@ -14,7 +14,7 @@ if [ ! -d /etc/bind/slaves ]; then
 chmod -R u=rwx,g=rx /etc/bind/{masters,slaves} >> /tmp/isc-bind.log
 chown -R root:bind /etc/bind/{masters,slaves} >> /tmp/isc-bind.log
 
-chmod u=rwx,g=rx /etc/bind/{zones.conf,zones-external.conf,views.conf,named.conf.options} >> /tmp/isc-bind.log
+chmod u=rw,g=r /etc/bind/{zones.conf,zones-external.conf,views.conf,named.conf.options} >> /tmp/isc-bind.log
 chown root:bind /etc/bind/{zones.conf,zones-external.conf,views.conf,named.conf.options} >> /tmp/isc-bind.log
 
 echo 'include "/etc/bind/views.conf";' >> /etc/bind/named.conf.local
