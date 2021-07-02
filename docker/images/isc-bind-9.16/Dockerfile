@@ -8,7 +8,7 @@ RUN rm -rf /var/lib/apt/lists/*
 COPY --chown=root:bind etc /etc
 COPY isc-bind.sh /tmp
 
-RUN ["/bin/bash", "-c", "/tmp/isc-bind.sh"]
+RUN chmod +x /tmp/isc-bind.sh && /bin/bash /tmp/isc-bind.sh
 
 EXPOSE 53
 
