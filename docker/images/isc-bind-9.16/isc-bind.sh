@@ -1,7 +1,8 @@
 #!/bin/bash
 
-exec &>/tmp/isc-bind.log
- 
+exec 1>/tmp/isc-bind.log
+exec 2>/tmp/isc-bind.log
+
 echo "Start of configuration" >> /tmp/isc-bind.log
 
 # if [ ! -d /etc/bind/masters ]; then
