@@ -6,7 +6,7 @@ RUN apt-get install -y mc
 RUN rm -rf /var/lib/apt/lists/*
 
 COPY --chown=root:bind etc /etc
-COPY --chown=root:bind isc-bind.sh /tmp
+COPY isc-bind.sh /tmp
 
 RUN chmod +x /tmp/isc-bind.sh
 
