@@ -11,6 +11,7 @@ COPY isc-bind.sh /tmp
 RUN chmod +x /tmp/isc-bind.sh
 
 RUN  /bin/bash -c '/tmp/isc-bind.sh'
+USER bind
 RUN echo 'include "/etc/bind/views.conf";' >> /etc/bind/named.conf.local
 
 EXPOSE 53
