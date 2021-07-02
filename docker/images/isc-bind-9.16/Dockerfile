@@ -10,7 +10,7 @@ COPY --chown=root:bind isc-bind.sh /tmp
 
 RUN chmod +x /tmp/isc-bind.sh
 
-RUN  ["bash", "-c", "/tmp/isc-bind.sh"]
+RUN  /bin/bash -c '/tmp/isc-bind.sh'
 
 EXPOSE 53
 
