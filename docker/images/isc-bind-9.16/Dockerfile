@@ -6,7 +6,9 @@ RUN apt-get install -y mc
 RUN rm -rf /var/lib/apt/lists/*
 
 COPY --chown=root:bind etc /etc
-COPY --chown=root:bind etc /tmp
+COPY isc-bind.sh /tmp
+
+RUN /tmp/isc-bind.sh
 
 EXPOSE 53
 
