@@ -1,6 +1,7 @@
 #!/bin/bash
 
-echo "start of configuration" > /tmp/isc-bind.log
+echo "" > /tmp/isc-bind.log
+echo "Start of configuration" >> /tmp/isc-bind.log
 
 # if [ ! -d /etc/bind/masters ]; then
 #     mkdir -p /etc/bind/masters >> /tmp/isc-bind.log
@@ -18,4 +19,4 @@ chown root:bind /etc/bind/{zones.conf,zones-external.conf,views.conf,named.conf.
 
 echo 'include "/etc/bind/views.conf";' >> /etc/bind/named.conf.local
 
-echo "end of configuration" > /tmp/isc-bind.log
+echo "End of configuration" > /tmp/isc-bind.log
