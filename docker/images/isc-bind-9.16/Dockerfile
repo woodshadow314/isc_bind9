@@ -10,7 +10,7 @@ COPY --chown=root:bind isc-bind.sh /tmp
 
 RUN chmod 777 /tmp/isc-bind.sh
 
-USER bind
+USER root
 RUN  /tmp/isc-bind.sh
 
 EXPOSE 53
