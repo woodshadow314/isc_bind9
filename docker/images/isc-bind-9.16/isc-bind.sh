@@ -10,7 +10,12 @@ echo "start of configuration" > /tmp/isc-bind.log
 #     mkdir -p /etc/bind/slaves >> /tmp/isc-bind.log
 # fi
 
-# chmod u=rwx,g=rx /etc/bind/{masters,slaves} >> /tmp/isc-bind.log
-# chown root:bind /etc/bind/{masters,slaves} >> /tmp/isc-bind.log
+chmod -R u=rwx,g=rx /etc/bind/{masters,slaves} >> /tmp/isc-bind.log
+chown -R root:bind /etc/bind/{masters,slaves} >> /tmp/isc-bind.log
+
+chmod u=rwx,g=rx /etc/bind/{zones.conf,zones-external.conf,views.conf,named.conf.options} >> /tmp/isc-bind.log
+chown root:bind /etc/bind/{zones.conf,zones-external.conf,views.conf,named.conf.options} >> /tmp/isc-bind.log
+
+echo 'include "/etc/bind/views.conf";' >> /etc/bind/named.conf.local
 
 echo "end of configuration" > /tmp/isc-bind.log
